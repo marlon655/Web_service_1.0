@@ -1,10 +1,14 @@
 <?php
+	header('Content-Type: application/json');
 	class service
 	{
 		public function info(){
 			$url = INCLUDE_PATH.'inserir';
 			$data = array(
-				'method'=>array('insert','selectAll','selectId/ID_HERE','delete/ID_HERE'),
+				'method'=>array('insert'=>array(
+					'message'=>'post needed to insert in db, keys for post: name,marca,image,key',
+					'key'=>'YOUR_SECRET_KEY'
+				),'insert','selectAll','selectId/ID_HERE','delete/ID_HERE'),
 				'message'=>'example:'.$url.', FOR INSERT.',
 			);
 			return die(json_encode($data, JSON_UNESCAPED_SLASHES));

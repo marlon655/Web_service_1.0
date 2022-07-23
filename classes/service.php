@@ -70,15 +70,23 @@
 			$sep = explode('/', $url);
 			$id = $sep[1];
 
+			$sql = Mysql::conectar()->prepare("SELECT * FROM `request` WHERE id = ?");
+			$sql->execute(array($id));
+			$img = $sql->fetch()['image'];
+			$explode = explode('/', $img);
+			$image = end($explode);
+			@unlink('images/'.$image);
+
 			$sql = Mysql::conectar()->prepare("DELETE FROM `request` WHERE id = ?");
 			$sql->execute(array($id));
+
 			
 			if ($sql->rowCount() == 1) {
 				$data = array
 				(
 						'delete'=>'success',
 						'message'=>'deleted',
-						'id_deleted'=> $id
+						'id_deleted'=> $id,
 					);
 			}else{
 				$data = array(
@@ -108,5 +116,4 @@
 		public function uploadFile($file){
 			move_uploaded_file($file['tmp_name'],BASE_DIR_PAINEL.'/images/'.$file['name']);
 		}
-
 	}  

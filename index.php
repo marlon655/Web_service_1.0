@@ -67,11 +67,11 @@
 				// $service->insert();
 				break;
 
-			case 'uploadfile':
-				$service = New service();
-				if ($service->validaImg($image)) {
-					$service->uploadFile($image);
-				}
+			// case 'uploadfile':
+			// 	$service = New service();
+			// 	if ($service->validaImg($image)) {
+			// 		$service->uploadFile($image);
+			// 	}
 				// $service->validaImg($image);
 				// $service->uploadFile($image);
 				break;
@@ -79,7 +79,7 @@
 
 			case 'deleteId':
 				$service = New service();
-				$service->delete();
+				$service->deleteId();
 				break;
 			
 			default:

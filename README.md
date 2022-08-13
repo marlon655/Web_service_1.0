@@ -26,7 +26,7 @@ Para poder fazer as requisições é nescessário uma chave a qual já esta conf
     define('INCLUDE_PATH', 'http://localhost/Web_service_1.0/');
     define('DATABASE', 'web_service_1.0');
   ```
-# Não esqueça de importar o Arquivo web_service_1_0.sql para seu banco de dados.
+## Não esqueça de importar o Arquivo web_service_1_0.sql para seu banco de dados.
 ## Back end
 - PHP
 

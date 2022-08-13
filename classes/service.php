@@ -1,4 +1,5 @@
 <?php
+	// header('Content-Type: application/json');
 	class service
 	{
 		public function info(){

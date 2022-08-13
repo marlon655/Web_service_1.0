@@ -27,13 +27,12 @@ Para poder fazer as requisições é nescessário uma chave a qual já esta conf
     define('DATABASE', 'web_service_1.0');
   ```
 ## Não esqueça de importar o Arquivo web_service_1_0.sql para seu banco de dados.
+
 ## Back end
 - PHP
 
 ## Front end
-- HTML
-- CSS
-- JavaScript
+- Nenhum
 
 ## Frameworks
 - Nenhum
